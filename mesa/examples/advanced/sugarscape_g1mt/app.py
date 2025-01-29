@@ -4,18 +4,18 @@ from mesa.visualization.components.matplotlib_components import make_mpl_space_c
 
 
 def agent_portrayal(agent):
-    return {"Shape": "o", "color": "red", "size": 10}
+    return {"marker": "o", "color": "red", "size": 10}
 
 
 propertylayer_portrayal = {
     "sugar": {
         "color": "blue",
-        "alpha": 0.75,
+        "alpha": 0.8,
         "colorbar": True,
         "vmin": 0,
         "vmax": 10,
     },
-    "spice": {"color": "red", "alpha": 0.75, "colorbar": True, "vmin": 0, "vmax": 10},
+    "spice": {"color": "red", "alpha": 0.8, "colorbar": True, "vmin": 0, "vmax": 10},
 }
 
 
@@ -23,6 +23,7 @@ sugarscape_space = make_mpl_space_component(
     agent_portrayal=agent_portrayal,
     propertylayer_portrayal=propertylayer_portrayal,
     post_process=None,
+    draw_grid=False,
 )
 
 
